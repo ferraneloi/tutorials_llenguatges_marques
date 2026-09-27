@@ -1,0 +1,117 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+import LanguageToggle from './LanguageToggle.astro';
+---
+
+<header class="header">
+	<div class="header-container">
+		<a href="/" class="logo-group">
+			<div class="logo-icon">
+				<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+					<polyline points="16 18 22 12 16 6"></polyline>
+					<polyline points="8 6 2 12 8 18"></polyline>
+				</svg>
+			</div>
+			<div class="logo-text">
+				<span class="brand-title" data-i18n="brandTitle">LLENGUATGES DE MARQUES</span>
+				<span class="brand-sub" data-i18n="brandSub">Institut Caparrella</span>
+			</div>
+		</a>
+
+		<nav class="nav-links">
+			<a href="/" class="nav-link" data-i18n="navHome">Inici</a>
+			<a href="/teoria" class="nav-link" data-i18n="navTheory">Evolució & Teoria</a>
+			<div class="controls-group">
+				<LanguageToggle />
+				<ThemeToggle />
+			</div>
+		</nav>
+	</div>
+</header>
+
+<style>
+	.header {
+		position: sticky;
+		top: 0;
+		z-index: 50;
+		backdrop-filter: blur(14px);
+		-webkit-backdrop-filter: blur(14px);
+		background: var(--header-bg);
+		border-bottom: 1px solid var(--border-card);
+		transition: background-color 0.3s ease, border-color 0.3s ease;
+	}
+
+	.header-container {
+		max-width: 1240px;
+		margin: 0 auto;
+		padding: 0.75rem 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.logo-group {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		text-decoration: none;
+	}
+
+	.logo-icon {
+		width: 36px;
+		height: 36px;
+		border-radius: 10px;
+		background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+	}
+
+	.logo-text {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.brand-title {
+		font-family: 'Outfit', sans-serif;
+		font-weight: 800;
+		font-size: 1.05rem;
+		letter-spacing: -0.01em;
+		color: var(--text-title);
+		transition: color 0.3s ease;
+	}
+
+	.brand-sub {
+		font-size: 0.7rem;
+		color: var(--text-muted);
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.nav-links {
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+	}
+
+	.nav-link {
+		color: var(--text-muted);
+		text-decoration: none;
+		font-size: 0.88rem;
+		font-weight: 600;
+		transition: color 0.2s ease;
+	}
+
+	.nav-link:hover {
+		color: var(--text-title);
+	}
+
+	.controls-group {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+</style>

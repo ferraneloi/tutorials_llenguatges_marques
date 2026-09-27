@@ -1,0 +1,69 @@
+---
+---
+
+<footer class="footer">
+	<div class="footer-container">
+		<p class="author-credits">
+			Made with <span class="tech-badge">Astro</span> and <span class="heart-pulse">❤️</span> by <strong class="author-name">Ferran Eloi</strong> • <span class="school-name">Institut Caparrella</span>
+		</p>
+	</div>
+</footer>
+
+<style>
+	.footer {
+		position: relative;
+		z-index: 10;
+		background: rgba(6, 9, 16, 0.85);
+		border-top: 1px solid var(--border-card);
+		padding: 1rem 1.5rem;
+		margin-top: auto;
+		text-align: center;
+		backdrop-filter: blur(10px);
+	}
+
+	.footer-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.author-credits {
+		font-size: 0.92rem;
+		color: #cbd5e1;
+		margin: 0;
+	}
+
+	.tech-badge {
+		display: inline-block;
+		padding: 0.1rem 0.45rem;
+		border-radius: 6px;
+		background: rgba(255, 255, 255, 0.08);
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		font-weight: 700;
+		color: #ffffff;
+		font-size: 0.82rem;
+	}
+
+	.heart-pulse {
+		display: inline-block;
+		animation: pulseHeart 1.5s ease infinite;
+	}
+
+	@keyframes pulseHeart {
+		0% { transform: scale(1); }
+		50% { transform: scale(1.25); }
+		100% { transform: scale(1); }
+	}
+
+	.author-name {
+		color: #ffffff;
+		font-weight: 700;
+	}
+
+	.school-name {
+		color: #a5b4fc;
+		font-weight: 600;
+	}
+</style>

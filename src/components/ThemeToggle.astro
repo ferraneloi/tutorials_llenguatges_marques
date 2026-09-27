@@ -1,0 +1,92 @@
+---
+---
+
+<button id="theme-toggle" class="theme-btn" type="button" aria-label="Canviar tema clar/fosc" title="Canvia de tema">
+	<!-- Moon icon (for dark mode) -->
+	<svg class="theme-icon icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+		<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+	</svg>
+	<!-- Sun icon (for light mode) -->
+	<svg class="theme-icon icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+		<circle cx="12" cy="12" r="5"></circle>
+		<line x1="12" y1="1" x2="12" y2="3"></line>
+		<line x1="12" y1="21" x2="12" y2="23"></line>
+		<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+		<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+		<line x1="1" y1="12" x2="3" y2="12"></line>
+		<line x1="21" y1="12" x2="23" y2="12"></line>
+		<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+		<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+	</svg>
+</button>
+
+<script>
+	function setupThemeToggle() {
+		const toggleBtn = document.getElementById('theme-toggle');
+		if (!toggleBtn) return;
+
+		toggleBtn.addEventListener('click', () => {
+			const isLight = document.documentElement.classList.toggle('light-theme');
+			const newTheme = isLight ? 'light' : 'dark';
+			localStorage.setItem('theme', newTheme);
+		});
+	}
+
+	// Run on initial load
+	setupThemeToggle();
+
+	// Support client-side navigation in Astro
+	document.addEventListener('astro:page-load', setupThemeToggle);
+	document.addEventListener('astro:after-swap', setupThemeToggle);
+</script>
+
+<style>
+	.theme-btn {
+		width: 38px;
+		height: 38px;
+		border-radius: 10px;
+		background: rgba(255, 255, 255, 0.07);
+		border: 1px solid var(--border-card);
+		color: var(--text-main);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: all 0.25s ease;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.theme-btn:hover {
+		background: rgba(99, 102, 241, 0.15);
+		border-color: rgba(99, 102, 241, 0.35);
+		transform: translateY(-2px);
+	}
+
+	.theme-icon {
+		position: absolute;
+		transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+	}
+
+	/* Dark mode: show Moon, hide Sun */
+	:global(html:not(.light-theme)) .icon-sun {
+		transform: rotate(90deg) scale(0);
+		opacity: 0;
+	}
+	:global(html:not(.light-theme)) .icon-moon {
+		transform: rotate(0deg) scale(1);
+		opacity: 1;
+		color: #a5b4fc;
+	}
+
+	/* Light mode: show Sun, hide Moon */
+	:global(html.light-theme) .icon-moon {
+		transform: rotate(-90deg) scale(0);
+		opacity: 0;
+	}
+	:global(html.light-theme) .icon-sun {
+		transform: rotate(0deg) scale(1);
+		opacity: 1;
+		color: #f59e0b;
+	}
+</style>

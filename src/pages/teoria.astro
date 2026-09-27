@@ -1,0 +1,347 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Evolució dels Llenguatges de Marques | Institut Caparrella">
+	<Header />
+	<main class="teoria-main">
+		<div class="teoria-container">
+			<div class="page-top">
+				<a href="/" class="back-link" data-i18n="theoryBack">← Tornar a la pàgina principal</a>
+				<span class="badge-pill" data-i18n="theoryBadge">Document Teòric</span>
+				<h1 class="page-title">
+					<span data-i18n="theoryTitle1">Evolució i Fonaments dels </span><span class="gradient-text" data-i18n="theoryTitle2">Llenguatges de Marques</span>
+				</h1>
+				<p class="page-subtitle" data-i18n="theorySubtitle">Un repàs a la història, l'arbre genealògic dels estàndards i la importància de les etiquetes en la informàtica moderna.</p>
+			</div>
+
+			<div class="content-cards">
+				<!-- Definició -->
+				<section class="card-box">
+					<h2 data-i18n="sec1Title">1. Què és un Llenguatge de Marques?</h2>
+					<p data-i18n-html="sec1P1">
+						Un <strong>llenguatge de marques</strong> (<em>markup language</em>) és una manera d'incorporar etiquetes o codis especials dins d'un document de text per definir-ne l'estructura, el format, el significat semàntic o les metadades.
+					</p>
+					<p data-i18n-html="sec1P2">
+						A diferència dels llenguatges de programació, no té instruccions de control de flux (bucles, condicionals complexos) ni operacions de memòria, sinó que descriu <strong>com s'ha d'organitzar o interpretar la informació</strong>.
+					</p>
+				</section>
+
+				<!-- Arbre evolutiu -->
+				<section class="card-box">
+					<h2 data-i18n="sec2Title">2. Arbre Genealògic i Evolució</h2>
+					<div class="tree-diagram">
+						<div class="tree-node root-node">
+							<strong>SGML</strong> (Standard Generalized Markup Language - ISO 8879)
+							<span data-i18n="sgmlDesc">L'estàndard mare creat als anys 80 per a documents complexos</span>
+						</div>
+						<div class="tree-branch"></div>
+						<div class="tree-row">
+							<div class="tree-node">
+								<span class="sub-badge">Web</span>
+								<strong>HTML</strong>
+								<span data-i18n="htmlDesc">Hipertext per al navegador</span>
+							</div>
+							<div class="tree-node">
+								<span class="sub-badge">Dades</span>
+								<strong>XML</strong>
+								<span data-i18n="xmlDesc2">Estructuració universal de dades</span>
+							</div>
+							<div class="tree-node">
+								<span class="sub-badge">Text Pla</span>
+								<strong>Markdown</strong>
+								<span data-i18n="mdDesc2">Sintaxi lleugera i àgil</span>
+							</div>
+						</div>
+						<div class="xml-family">
+							<strong data-i18n="xmlFamilyTitle">Derivats directes d'XML:</strong>
+							<div class="family-tags">
+								<span class="ftag">🎨 SVG (Gràfics 2D)</span>
+								<span class="ftag">📐 MathML (Fórmules matemàtiques)</span>
+								<span class="ftag">📡 RSS / Atom (Sindicació)</span>
+								<span class="ftag">📱 XHTML / Android XML</span>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Principals Característiques -->
+				<section class="card-box">
+					<h2 data-i18n="sec3Title">3. Per a què serveixen els Llenguatges de Marques?</h2>
+					<div class="benefits-grid">
+						<div class="b-item">
+							<div class="b-icon">📂</div>
+							<div>
+								<h4 data-i18n="b1Title">Portabilitat de les Dades</h4>
+								<p data-i18n="b1Desc">Permeten que sistemes heterogenis comparteixin dades utilitzant formats en text pla universals.</p>
+							</div>
+						</div>
+						<div class="b-item">
+							<div class="b-icon">🎨</div>
+							<div>
+								<h4 data-i18n="b2Title">Separació de Capes</h4>
+								<p data-i18n="b2Desc">Separen el contingut de la presentació visual (delegada a CSS o motors de render).</p>
+							</div>
+						</div>
+						<div class="b-item">
+							<div class="b-icon">🔍</div>
+							<div>
+								<h4 data-i18n="b3Title">Semàntica i Accessibilitat</h4>
+								<p data-i18n="b3Desc">Faciliten que motors de cerca (SEO) i lectors de pantalla comprenguin el significat del contingut.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.teoria-main {
+		flex: 1;
+		position: relative;
+		z-index: 10;
+		padding: 3rem 1.5rem 5rem;
+	}
+
+	.teoria-container {
+		max-width: 960px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+	}
+
+	.page-top {
+		text-align: left;
+	}
+
+	.back-link {
+		display: inline-block;
+		color: #818cf8;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 0.9rem;
+		margin-bottom: 1.25rem;
+		transition: transform 0.2s ease;
+	}
+
+	.back-link:hover {
+		transform: translateX(-4px);
+		color: #a5b4fc;
+	}
+
+	.badge-pill {
+		display: block;
+		font-family: 'Outfit', sans-serif;
+		font-size: 0.8rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: #a855f7;
+		margin-bottom: 0.5rem;
+	}
+
+	.page-title {
+		font-size: clamp(2rem, 4vw, 3rem);
+		font-weight: 900;
+		color: var(--text-title);
+		letter-spacing: -0.02em;
+		line-height: 1.15;
+		margin-bottom: 0.85rem;
+		transition: color 0.3s ease;
+	}
+
+	.gradient-text {
+		background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #f43f5e 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.page-subtitle {
+		font-size: 1.1rem;
+		color: var(--text-muted);
+		line-height: 1.6;
+		transition: color 0.3s ease;
+	}
+
+	.content-cards {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.card-box {
+		background: var(--bg-card);
+		border: 1px solid var(--border-card);
+		border-radius: 20px;
+		padding: 2rem;
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+		transition: background-color 0.3s ease, border-color 0.3s ease;
+	}
+
+	.card-box h2 {
+		font-family: 'Outfit', sans-serif;
+		font-size: 1.45rem;
+		font-weight: 800;
+		color: var(--text-title);
+		margin-bottom: 1rem;
+		border-bottom: 1px solid var(--border-card);
+		padding-bottom: 0.75rem;
+		transition: color 0.3s ease;
+	}
+
+	.card-box p {
+		font-size: 1rem;
+		color: var(--text-muted);
+		line-height: 1.7;
+		margin-bottom: 1rem;
+		transition: color 0.3s ease;
+	}
+
+	.card-box p:last-child {
+		margin-bottom: 0;
+	}
+
+	.tree-diagram {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+		margin-top: 1.5rem;
+	}
+
+	.tree-node {
+		background: rgba(30, 41, 59, 0.7);
+		border: 1px solid var(--border-card);
+		border-radius: 12px;
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		text-align: center;
+	}
+
+	:global(html.light-theme) .tree-node {
+		background: rgba(241, 245, 249, 0.9);
+	}
+
+	.root-node {
+		background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.2));
+		border-color: rgba(99, 102, 241, 0.4);
+	}
+
+	.root-node span {
+		font-size: 0.8rem;
+		color: var(--text-dim);
+		margin-top: 0.25rem;
+	}
+
+	.tree-branch {
+		width: 2px;
+		height: 20px;
+		background: var(--border-card);
+	}
+
+	.tree-row {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+		width: 100%;
+	}
+
+	@media (max-width: 640px) {
+		.tree-row {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.sub-badge {
+		font-size: 0.7rem;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: #818cf8;
+		margin-bottom: 0.25rem;
+	}
+
+	.xml-family {
+		margin-top: 0.75rem;
+		width: 100%;
+		background: rgba(15, 23, 42, 0.5);
+		border: 1px dashed var(--border-card);
+		border-radius: 12px;
+		padding: 1.25rem;
+	}
+
+	:global(html.light-theme) .xml-family {
+		background: rgba(241, 245, 249, 0.8);
+	}
+
+	.family-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.6rem;
+		margin-top: 0.75rem;
+	}
+
+	.ftag {
+		font-size: 0.85rem;
+		font-weight: 600;
+		padding: 0.35rem 0.75rem;
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.06);
+		border: 1px solid var(--border-card);
+		color: var(--text-title);
+	}
+
+	:global(html.light-theme) .ftag {
+		background: #ffffff;
+	}
+
+	.benefits-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		gap: 1.25rem;
+		margin-top: 1rem;
+	}
+
+	.b-item {
+		display: flex;
+		gap: 0.85rem;
+		align-items: flex-start;
+		background: rgba(255, 255, 255, 0.03);
+		padding: 1rem;
+		border-radius: 12px;
+		border: 1px solid var(--border-card);
+	}
+
+	:global(html.light-theme) .b-item {
+		background: rgba(255, 255, 255, 0.6);
+	}
+
+	.b-icon {
+		font-size: 1.4rem;
+	}
+
+	.b-item h4 {
+		font-size: 0.95rem;
+		font-weight: 700;
+		color: var(--text-title);
+		margin-bottom: 0.2rem;
+		transition: color 0.3s ease;
+	}
+
+	.b-item p {
+		font-size: 0.85rem;
+		color: var(--text-muted);
+		line-height: 1.45;
+		margin: 0;
+		transition: color 0.3s ease;
+	}
+</style>

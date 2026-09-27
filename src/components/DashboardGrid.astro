@@ -1,0 +1,85 @@
+---
+import LanguageCard from './LanguageCard.astro';
+
+const languages = [
+	{
+		title: 'XML',
+		badge: 'Dades & Estructura',
+		badgeKey: 'xmlBadge',
+		url: 'https://tutorial-xml.vercel.app/',
+		color: 'xml' as const,
+		description: "Llenguatge d'etiquetes extensible per a l'emmagatzematge, estructuració i intercanvi universal de dades.",
+		descKey: 'xmlDesc',
+		buttonLabel: 'Aprèn XML',
+		btnKey: 'xmlBtn'
+	},
+	{
+		title: 'Markdown',
+		badge: 'Documentació & Text',
+		badgeKey: 'mdBadge',
+		url: 'https://tutorial-markdown-cat.vercel.app',
+		color: 'md' as const,
+		description: "Llenguatge de marques lleuger per formatar documents en text pla de manera senzilla, ràpida i intuïtiva.",
+		descKey: 'mdDesc',
+		buttonLabel: 'Aprèn Markdown',
+		btnKey: 'mdBtn'
+	},
+	{
+		title: 'SVG',
+		badge: 'Gràfics Vectorials 2D',
+		badgeKey: 'svgBadge',
+		url: 'https://tutorial-svg.vercel.app/',
+		color: 'svg' as const,
+		description: "Format d'imatges i formes geomètriques basat en XML que s'escala a qualsevol mida sense perdre resolució.",
+		descKey: 'svgDesc',
+		buttonLabel: 'Aprèn SVG',
+		btnKey: 'svgBtn'
+	},
+	{
+		title: 'MathML',
+		badge: 'Fórmules Matemàtiques',
+		badgeKey: 'mathBadge',
+		url: 'https://tutorial-mathml.vercel.app/',
+		color: 'mathml' as const,
+		description: "Estàndard W3C per descriure la notació i estructura d'equacions matemàtiques a la web.",
+		descKey: 'mathDesc',
+		buttonLabel: 'Aprèn MathML',
+		btnKey: 'mathBtn'
+	}
+];
+---
+
+<section class="dashboard-section">
+	<div class="cards-grid">
+		{languages.map((lang) => (
+			<LanguageCard {...lang} />
+		))}
+	</div>
+</section>
+
+<style>
+	.dashboard-section {
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+
+	.cards-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		gap: 1.25rem;
+	}
+
+	@media (min-width: 768px) {
+		.cards-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (min-width: 1100px) {
+		.cards-grid {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+</style>

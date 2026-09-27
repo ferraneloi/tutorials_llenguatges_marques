@@ -1,0 +1,483 @@
+---
+---
+
+<section id="que-es" class="info-section">
+	<div class="info-container">
+		
+		<!-- Què és un llenguatge de marques -->
+		<div class="info-grid">
+			<div class="info-text-box">
+				<span class="info-pill">Fonaments Teòrics</span>
+				<h2 class="info-heading">Què és un Llenguatge de Marques?</h2>
+				<p class="lead-text">
+					Un <strong>llenguatge de marques</strong> (o <em>markup language</em>) és un sistema de codificació que combina text amb informació addicional sobre l'estructura, el format, el significat semàntic o el processament d'aquest text.
+				</p>
+				<p class="regular-text">
+					A diferència dels llenguatges de programació imperatius (com JavaScript, Python o Java), els llenguatges de marques <strong>no contenen lògica d'execució d'algoritmes</strong> (bucles, condicions complexes o memòria mutable), sinó que utilitzen símbols especials o <strong>etiquetes (tags)</strong> per indicar com s'ha d'interpretar, organitzar o renderitzar la informació.
+				</p>
+
+				<div class="features-list">
+					<div class="feature-item">
+						<div class="feature-bullet">1</div>
+						<div>
+							<h4>Separació de Contingut i Format</h4>
+							<p>Permet estructurar les dades de manera neta, delegant l'estil o la presentació a altres capes especialitzades (com CSS).</p>
+						</div>
+					</div>
+					<div class="feature-item">
+						<div class="feature-bullet">2</div>
+						<div>
+							<h4>Interoperabilitat i Portabilitat</h4>
+							<p>Com que es basen en formats de text estàndard oberts, poden ser llegits per qualsevol plataforma o sistema operatiu.</p>
+						</div>
+					</div>
+					<div class="feature-item">
+						<div class="feature-bullet">3</div>
+						<div>
+							<h4>Riquesa Semàntica i Metadades</h4>
+							<p>Aporten context i valor a la informació, facilitant la indexació per motors de cerca (SEO) i sistemes d'accessibilitat.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="info-visual-box">
+				<div class="visual-card">
+					<div class="visual-header">
+						<span class="visual-title">Evolució i Família dels Llenguatges</span>
+					</div>
+					<div class="tree-diagram">
+						<div class="tree-node root-node">
+							<strong>SGML</strong> (Standard Generalized Markup Language)
+							<span class="tree-desc">L'origen dels estàndards internacionals ISO 8879</span>
+						</div>
+						<div class="tree-branch"></div>
+						<div class="tree-children">
+							<div class="tree-node child-html">
+								<span class="node-badge">Web</span>
+								<strong>HTML</strong>
+								<span>Estructura de pàgines web</span>
+							</div>
+							<div class="tree-node child-xml">
+								<span class="node-badge">Dades</span>
+								<strong>XML</strong>
+								<span>Arbre d'informació estructurada</span>
+							</div>
+							<div class="tree-node child-light">
+								<span class="node-badge">Lleuger</span>
+								<strong>Markdown</strong>
+								<span>Escriptura àgil en text pla</span>
+							</div>
+						</div>
+						<div class="xml-subchildren">
+							<div class="sub-arrow">↳ Derivats d'XML:</div>
+							<div class="sub-tags">
+								<span class="sub-tag tag-svg">🎨 SVG (Gràfics 2D)</span>
+								<span class="sub-tag tag-math">📐 MathML (Equacions)</span>
+								<span class="sub-tag tag-rss">📡 RSS / Atom</span>
+								<span class="sub-tag tag-kml">🗺️ KML / GML (Geodades)</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Taula Comparativa -->
+		<div id="comparativa" class="comparison-wrapper">
+			<div class="comparison-header">
+				<span class="info-pill">Resum & Comparativa</span>
+				<h3 class="comparison-title">Com triar el llenguatge de marques adequat?</h3>
+				<p class="comparison-subtitle">Consulta els punts forts i el focus principal de cada tecnologia del curs.</p>
+			</div>
+
+			<div class="table-responsive">
+				<table class="comparison-table">
+					<thead>
+						<tr>
+							<th>Llenguatge</th>
+							<th>Tipus de Sintaxi</th>
+							<th>Objectiu Principal</th>
+							<th>Ecosistema / Ús Habitual</th>
+							<th>Tutorial Directe</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<div class="table-lang">
+									<span class="lang-icon-bullet" style="background: #f97316;"></span>
+									<strong>XML</strong>
+								</div>
+							</td>
+							<td>Etiquetes estrictes amb tancament obligatori (&lt;tag&gt;...&lt;/tag&gt;)</td>
+							<td>Emmagatzematge i intercanvi universal de dades amb esquemes (XSD/DTD)</td>
+							<td>Serveis web, Android Manifests, bases de dades corporatives</td>
+							<td><a href="https://tutorial-xml.vercel.app/" target="_blank" rel="noopener" class="table-link link-xml">Obrir XML →</a></td>
+						</tr>
+						<tr>
+							<td>
+								<div class="table-lang">
+									<span class="lang-icon-bullet" style="background: #0284c7;"></span>
+									<strong>Markdown</strong>
+								</div>
+							</td>
+							<td>Símbols naturals de text pla (#, *, -, [], `)</td>
+							<td>Redacció ràpida de documentació i continguts convertibles a HTML</td>
+							<td>README de GitHub, blogs moderns, Obsidian, eines d'apunts</td>
+							<td><a href="https://tutorial-markdown-cat.vercel.app" target="_blank" rel="noopener" class="table-link link-md">Obrir Markdown →</a></td>
+						</tr>
+						<tr>
+							<td>
+								<div class="table-lang">
+									<span class="lang-icon-bullet" style="background: #ec4899;"></span>
+									<strong>SVG</strong>
+								</div>
+							</td>
+							<td>Etiquetes XML per a formes geomètriques (&lt;circle&gt;, &lt;path&gt;)</td>
+							<td>Dibuix vectorial 2D d'alta fidelitat i escalabilitat infinita</td>
+							<td>Icones web, logotips, infografies, interfícies responsives</td>
+							<td><a href="https://tutorial-svg.vercel.app/" target="_blank" rel="noopener" class="table-link link-svg">Obrir SVG →</a></td>
+						</tr>
+						<tr>
+							<td>
+								<div class="table-lang">
+									<span class="lang-icon-bullet" style="background: #8b5cf6;"></span>
+									<strong>MathML</strong>
+								</div>
+							</td>
+							<td>Etiquetes XML per a notació matemàtica (&lt;math&gt;, &lt;msup&gt;, &lt;mfrac&gt;)</td>
+							<td>Representació semàntica i visual de càlcul i equacions científiques</td>
+							<td>Portals acadèmics, revistes científiques, llibres digitals</td>
+							<td><a href="https://tutorial-mathml.vercel.app/" target="_blank" rel="noopener" class="table-link link-mathml">Obrir MathML →</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<style>
+	.info-section {
+		position: relative;
+		z-index: 10;
+		padding: 4rem 1.5rem;
+		background: rgba(10, 15, 26, 0.6);
+		border-top: 1px solid var(--border-card);
+		border-bottom: 1px solid var(--border-card);
+	}
+
+	.info-container {
+		max-width: 1280px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		gap: 5rem;
+	}
+
+	.info-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	@media (min-width: 1024px) {
+		.info-grid {
+			grid-template-columns: 1.15fr 0.85fr;
+			gap: 4rem;
+		}
+	}
+
+	.info-pill {
+		display: inline-block;
+		font-family: 'Outfit', sans-serif;
+		font-size: 0.8rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: #a855f7;
+		margin-bottom: 0.75rem;
+	}
+
+	.info-heading {
+		font-size: clamp(2rem, 3.5vw, 2.75rem);
+		font-weight: 800;
+		color: #ffffff;
+		margin-bottom: 1.25rem;
+		letter-spacing: -0.02em;
+		line-height: 1.2;
+	}
+
+	.lead-text {
+		font-size: 1.12rem;
+		line-height: 1.7;
+		color: #e2e8f0;
+		margin-bottom: 1rem;
+	}
+
+	.lead-text strong {
+		color: #a5b4fc;
+	}
+
+	.regular-text {
+		font-size: 1rem;
+		line-height: 1.7;
+		color: var(--text-muted);
+		margin-bottom: 2rem;
+	}
+
+	.features-list {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	.feature-item {
+		display: flex;
+		gap: 1rem;
+		align-items: flex-start;
+	}
+
+	.feature-bullet {
+		width: 32px;
+		height: 32px;
+		border-radius: 8px;
+		background: rgba(99, 102, 241, 0.15);
+		border: 1px solid rgba(99, 102, 241, 0.35);
+		color: #818cf8;
+		font-family: 'Outfit', sans-serif;
+		font-weight: 800;
+		font-size: 0.95rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+	}
+
+	.feature-item h4 {
+		font-size: 1.05rem;
+		font-weight: 700;
+		color: #ffffff;
+		margin-bottom: 0.2rem;
+	}
+
+	.feature-item p {
+		font-size: 0.9rem;
+		color: var(--text-muted);
+		line-height: 1.5;
+	}
+
+	.visual-card {
+		background: rgba(18, 24, 38, 0.8);
+		border: 1px solid var(--border-card);
+		border-radius: 20px;
+		padding: 1.75rem;
+		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+	}
+
+	.visual-header {
+		margin-bottom: 1.5rem;
+		padding-bottom: 0.75rem;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	}
+
+	.visual-title {
+		font-family: 'Outfit', sans-serif;
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: #ffffff;
+	}
+
+	.tree-diagram {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.tree-node {
+		background: rgba(30, 41, 59, 0.7);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 12px;
+		padding: 0.85rem 1.25rem;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		text-align: center;
+		transition: transform 0.2s ease;
+	}
+
+	.tree-node:hover {
+		transform: translateY(-2px);
+		border-color: rgba(99, 102, 241, 0.4);
+	}
+
+	.root-node {
+		background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.2));
+		border-color: rgba(99, 102, 241, 0.4);
+	}
+
+	.tree-desc {
+		font-size: 0.75rem;
+		color: var(--text-dim);
+		margin-top: 0.2rem;
+	}
+
+	.tree-branch {
+		width: 2px;
+		height: 20px;
+		background: rgba(255, 255, 255, 0.15);
+	}
+
+	.tree-children {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.75rem;
+		width: 100%;
+	}
+
+	@media (max-width: 640px) {
+		.tree-children {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.node-badge {
+		font-size: 0.65rem;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: var(--text-dim);
+		margin-bottom: 0.2rem;
+	}
+
+	.xml-subchildren {
+		margin-top: 0.5rem;
+		width: 100%;
+		background: rgba(15, 23, 42, 0.6);
+		border: 1px dashed rgba(255, 255, 255, 0.12);
+		border-radius: 12px;
+		padding: 1rem;
+	}
+
+	.sub-arrow {
+		font-size: 0.8rem;
+		font-weight: 700;
+		color: #94a3b8;
+		margin-bottom: 0.6rem;
+	}
+
+	.sub-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.sub-tag {
+		font-size: 0.78rem;
+		font-weight: 600;
+		padding: 0.3rem 0.65rem;
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		color: #cbd5e1;
+	}
+
+	/* Comparison Table */
+	.comparison-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.comparison-header {
+		text-align: center;
+	}
+
+	.comparison-title {
+		font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+		font-weight: 800;
+		color: #ffffff;
+		margin-bottom: 0.5rem;
+	}
+
+	.comparison-subtitle {
+		font-size: 1rem;
+		color: var(--text-muted);
+	}
+
+	.table-responsive {
+		overflow-x: auto;
+		background: rgba(18, 24, 38, 0.6);
+		border-radius: 18px;
+		border: 1px solid var(--border-card);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	}
+
+	.comparison-table {
+		width: 100%;
+		border-collapse: collapse;
+		text-align: left;
+		min-width: 700px;
+	}
+
+	.comparison-table th {
+		background: rgba(30, 41, 59, 0.4);
+		padding: 1.1rem 1.25rem;
+		font-family: 'Outfit', sans-serif;
+		font-size: 0.85rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: #94a3b8;
+		border-bottom: 1px solid var(--border-card);
+	}
+
+	.comparison-table td {
+		padding: 1.1rem 1.25rem;
+		font-size: 0.9rem;
+		color: #cbd5e1;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+		line-height: 1.5;
+	}
+
+	.comparison-table tbody tr:hover {
+		background: rgba(255, 255, 255, 0.02);
+	}
+
+	.table-lang {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.lang-icon-bullet {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+	}
+
+	.table-link {
+		display: inline-block;
+		font-weight: 700;
+		font-size: 0.85rem;
+		text-decoration: none;
+		padding: 0.35rem 0.75rem;
+		border-radius: 8px;
+		transition: all 0.2s ease;
+	}
+
+	.link-xml { background: rgba(249, 115, 22, 0.15); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.3); }
+	.link-xml:hover { background: #f97316; color: #ffffff; }
+
+	.link-md { background: rgba(2, 132, 199, 0.15); color: #38bdf8; border: 1px solid rgba(2, 132, 199, 0.3); }
+	.link-md:hover { background: #0284c7; color: #ffffff; }
+
+	.link-svg { background: rgba(236, 72, 153, 0.15); color: #f472b6; border: 1px solid rgba(236, 72, 153, 0.3); }
+	.link-svg:hover { background: #ec4899; color: #ffffff; }
+
+	.link-mathml { background: rgba(139, 92, 246, 0.15); color: #a78bfa; border: 1px solid rgba(139, 92, 246, 0.3); }
+	.link-mathml:hover { background: #8b5cf6; color: #ffffff; }
+</style>
